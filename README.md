@@ -25,8 +25,8 @@
 
 There are two HTML starting points, from which you can choose:
 
-- `index.html` - (IE10+) the default starting point, containing Material Design layout.
-- `basic.html` - (IE8+) no layout, but still includes our minimal mobile best-practices
+- `index.html` - the default starting point, containing Material Design layout.
+- `basic.html` - no layout, but still includes our minimal mobile best-practices
 
 Be sure to look over the [installation docs](docs/install.md) to verify your environment is prepared to run WSK.
 Once you have verified that your system can run WSK, check out the [commands](docs/commands.md) available to get started.
@@ -37,17 +37,14 @@ Web Starter Kit strives to give you a high performance starting point out of the
 
 ## Browser Support
 
-At present, we officially aim to support the following browsers:
+At present, we officially aim to support the last two versions of the following browsers:
 
-* IE9, IE10, IE11, IE Mobile 10
-* FF 30, 31
-* Chrome 34, 35
-* Safari 7, 8
-* Opera 23, 24
-* iOS Safari 7, 8
-* Opera Coast
-* Android / Chrome 4.4, 4.4.3
-* BlackBerry 10
+* Chrome
+* Edge
+* Firefox
+* Safari
+* Opera
+* Internet Explorer 9+
 
 This is not to say that Web Starter Kit cannot be used in browsers older than those reflected, but merely that our focus will be on ensuring our layouts work great in the above.
 
