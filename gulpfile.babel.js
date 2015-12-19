@@ -34,9 +34,17 @@ import swPrecache from 'sw-precache';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import {output as pagespeed} from 'psi';
 import pkg from './package.json';
+import plumber from 'gulp-plumber';
+
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+var onError = function (err) {
+  // gutil.beep();
+  console.log(err);
+  this.emit('end');
+};
 
 // Lint JavaScript
 gulp.task('lint', () =>
@@ -113,6 +121,7 @@ gulp.task('scripts', () =>
       './app/scripts/main.js'
       // Other scripts
     ])
+      .pipe(plumber({ errorHandler: onError}))
       .pipe($.newer('.tmp/scripts'))
       .pipe($.sourcemaps.init())
       .pipe($.babel())
