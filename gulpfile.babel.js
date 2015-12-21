@@ -28,6 +28,7 @@ import fs from 'fs';
 import path from 'path';
 import gulp from 'gulp';
 import del from 'del';
+import vinylPaths from 'vinyl-paths';
 import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
 import swPrecache from 'sw-precache';

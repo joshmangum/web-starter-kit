@@ -1,31 +1,51 @@
 
-add gulp-plumber
-add vinylPaths
+### Add gulp-plumber to stop reload crashing
+```
+npm install --save-dev gulp-plumber
+```
 
 
 ## Github Pages deployment
 
-### Add gulp-subtree
+### Add gulp-subtree and vinyl-paths
 ```
 npm install --save-dev gulp-subtree
+npm install --save-dev vinyl-paths
 ```
-### Remove `dist` from `.gitignore`
+### Remove `dist` from `.gitignore` and delete contents
 
 ```diff
- node_modules
--dist
+  node_modules
++#dist
+- dist
  .tmp
  app.yaml
 ```
 
-### Remove `dist` and make gh-pages branch
 ```
 rm -rf dist/*
 ```
-## Usage
+
+### Make gh-pages branch
+
+git branch gh-pages
+git checkout gh-pages
+
+### Usage
 
 1. Run `$ gulp deploy`.
 2. Visit `http://[your-username].github.io/[repo-name]`.
+
+### Normal dev cycle
+
+1. Run `$ gulp serve` to write, debug, and test locally.
+2. Commit changes with git to master.
+   ```
+   git add .
+   git commit -m "a change message"   
+   git push origin master
+   ```
+3. Run `$ gulp deploy` to build dist and push it to gh-pages branch
 
 
 ### References
