@@ -208,7 +208,11 @@ gulp.task('default', ['clean'], cb =>
     cb
   )
 );
-
+gulp.task('deploy', ['default'], () => {
+  return gulp.src('dist')
+    .pipe($.subtree())
+    .pipe(vinylPaths(del));
+});
 // Run PageSpeed Insights
 gulp.task('pagespeed', cb =>
   // Update the below URL to the public URL of your site
