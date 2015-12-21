@@ -1,9 +1,4 @@
 
-### Add gulp-plumber to stop reload crashing
-```
-npm install --save-dev gulp-plumber
-```
-
 
 ## Github Pages deployment
 
@@ -26,21 +21,22 @@ npm install --save-dev vinyl-paths
 rm -rf dist/*
 ```
 
-### Make gh-pages branch
+### Delete existing gh-pages branch
 
-git branch gh-pages
-git checkout gh-pages
+There's an existing branch in the tree.
+`$ git push origin --delete gh-pages`
 
 ### Usage
 
 1. Run `$ gulp deploy`.
 2. Visit `http://[your-username].github.io/[repo-name]`.
 
-### Normal dev cycle
+### Normal dev cycle guide
 
-1. Run `$ gulp serve` to write, debug, and test locally.
-2. Commit changes with git to master.
+1. Run `$ gulp serve` to write, debug, and test feature locally.
+2. Commit changes with git to master. Use gulp clean first to remove dist directory.  Then commit code.
    ```
+   gulp clean
    git add .
    git commit -m "a change message"   
    git push origin master
