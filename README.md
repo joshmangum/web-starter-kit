@@ -1,3 +1,8 @@
+# Changes from Google Web Starter Kit
+
+Removed material design, service worker (still buggy), and detailed documentation.  
+
+Added support for Github Pages deployment, gulp plumber to stop gulp reload from crashing, and auto reload when js files change.
 
 ## Getting started
 
@@ -21,19 +26,17 @@ git push origin master
 
 Then type: `$ gulp deploy` to push to Github Pages.
 
-
-
 ### Normal development cycle guide
 
-1. Run `$ gulp serve` to write, debug, and test feature locally.
-2. Use gulp clean first to remove `dist` directory. Then commit code normally.
+* Run `$ gulp serve` to write, debug, and test feature locally.
+* Use gulp clean first to remove `dist` directory. Then commit code normally:
 ```
 gulp clean
 git add .
 git commit -m "a change message"   
 git push origin master
- ```
-3. Run `$ gulp deploy` to build `dist` directory and push it to gh-pages branch.
+```
+* Run `$ gulp deploy` to build `dist` directory and push it to gh-pages branch.
 
 ## Original docs
 
@@ -41,7 +44,7 @@ View original [documentation](https://github.com/google/web-starter-kit) for mor
 
 ## Github Pages deployment setup
 
-Changes from .6 version of google-web-starter-kit to make Github Pages deployment work.
+Historical notes about changes needed from .6 version of google-web-starter-kit to make Github Pages deployment work.
 
 ### Add gulp-subtree and vinyl-paths
 ```
