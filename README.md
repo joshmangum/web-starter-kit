@@ -10,7 +10,9 @@ Clone repository to new location, or use the zip file.
 
 Type `$ npm install` in directory.
 
-### Make git repository and add to Github
+### Deploy to Github Pages
+
+Make git repository and add to Github
 
 Visit https://github.com/new and add repository name [repo].
 
